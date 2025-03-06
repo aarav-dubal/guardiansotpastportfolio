@@ -32,47 +32,54 @@
         .description, .timeline, .links {
             margin-bottom: 20px;
         }
-.dropdown {
+        .dropdown {
             position: relative;
             display: inline-block;
         }
-
+        
         .dropbtn {
-            background-color: #3498db;
-            color: white;
+            background-color: #2b5d13; /* Darker green to match background */
+            color: #a4a4dd; /* Matches text color */
             padding: 10px 20px;
             font-size: 16px;
             border: none;
             cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
-
+        
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #f9f9f9;
+            background-color: #2b5d13; /* Dark green dropdown */
             min-width: 160px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
             z-index: 1;
         }
-
+        
         .dropdown-content a {
-            color: black;
+            color: #a4a4dd; /* Matches text color */
             padding: 12px 16px;
             text-decoration: none;
             display: block;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
-
+        
         .dropdown-content a:hover {
-            background-color: #f1f1f1;
+            background-color: #3e7320; /* Slightly lighter green for hover */
+            color: #ffffff; /* White text for contrast */
         }
-
+        
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
+        
         .dropdown:hover .dropbtn {
-            background-color: #2980b9;
+            background-color: #3e7320; /* Slightly lighter green for hover */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Soft glow effect */
         }
+        
     </style>
 </head>
 <body>
@@ -99,18 +106,8 @@
                     <a href="week9.html">Week 9</a>
                     </div>
             </div>
-
-      <!--  <section class="timeline">
-            <h2>Project Timeline</h2>
-            <ul>
-                <li><strong>Week 1-3:</strong> Research historical figures, develop character concepts, plan storyline and educational goals.</li>
-                <li><strong>Week 4-5:</strong> Get familiar with Unreal Engine, create initial sprites, begin scripting educational dialogue and history-related questions.</li>
-                <li><strong>Week 6:</strong> At the beginning of the week all we knew how to do was add things to worlds and we were on a preset world but after this week we were able to add assets into the world and create a mini game. This week we followed a youtube tutorial in order to get a better understanding of Unreal Engine.<iframe width="560" height="315" src="https://www.youtube.com/embed/9qkm4ZUFb8c?si=Ef94DV68lB3tuT19" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
-                <li><strong>Week 7-8:</strong> Program core mechanics such as player interactions, questions for progression, and battle sequences. Design first level/area of the game, focusing on one historical era. Conduct initial playtesting and gather feedback</li>
-                <li><strong>Week 9-12:</strong> Add other regions/time periods if time permits. Refine based on dialogue and test thoroughly to make sure quality is maximized</li>
-                <li><strong>End of Semester:</strong> Complete and package the game, focusing on delivering a polished demo.</li>
-            </ul> -->
         </section>
+        
         <section class="ideas">
             <h2>Level Ideas</h2>
             <h3>For every level/time period, give the new character some sort of weapon or mechanic based on the situation</h3>
@@ -122,18 +119,17 @@
                 <li><strong>Time Stop:</strong> Allows time to freeze or go into slow motion for a short amount of time allowing you to become more powerful.</li>
                 <li><strong></strong>Have the character attempt to stop the Fall of Rome and keep Rome afloat. We will also have the character meet past leaders.</li>
                 <h3>10th Century China</h3>
-                <li><strong>Explosives/Smokes</strong>Allows you to place traps in order to help defeat other enemies while smokes will distract enemies and allow you to get away.</li>
+                <li><strong>Explosives/Smokes:</strong> Allows you to place traps in order to help defeat other enemies while smokes will distract enemies and allow you to get away.</li>
                 <li><strong></strong>This section will have your character help with the creation of guns and gunpowder in general. We will have them do this in order to take over China.</li>
                 <h3>Black Plague</h3>
-                <li><strong>Medicine</strong>Through the level you will acquire more medicines which will allow you to gain new magical abilities or heal yourself.</li>
+                <li><strong>Medicine:</strong> Through the level you will acquire more medicines which will allow you to gain new magical abilities or heal yourself.</li>
                 <li><strong></strong>Place them into a level where we have them get specific items in order to create a remedy to cure people from the black plague.</li>
                 <h3>1492</h3>
-                <li><strong>Mapping/Scouting</strong>This allows you to enter a first person view almost like controlling a drone to fly ahead and see enemies or traps ahead of you.</li>
+                <li><strong>Mapping/Scouting:</strong> This allows you to enter a first person view almost like controlling a drone to fly ahead and see enemies or traps ahead of you.</li>
                 <li><strong></strong>Have the person help to build and set up new lands as well as have them have a portion where they have to stay alive and help others on the trip.</li>
-                
-
             </ul>
         </section>
+        
         <section class="links">
             <h2>Team Member Portfolios</h2>
             <ul>
