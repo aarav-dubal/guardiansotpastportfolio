@@ -1,166 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History Game Portfolio</title>
-    <style>
-        body {
-            font-family: Garamond, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1a3c0c;
-            color: #a4a4dd;
-        }
-        header {
-            background-color: #1a3c0c;
-            color: #a4a4dd;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #1a3c0c;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #ffffff;
-        }
-        .description, .timeline, .links {
-            margin-bottom: 20px;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .dropbtn {
-            background-color: #2b5d13; /* Darker green to match background */
-            color: #a4a4dd; /* Matches text color */
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #2b5d13; /* Dark green dropdown */
-            min-width: 160px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            border-radius: 5px;
-            z-index: 1;
-        }
-        
-        .dropdown-content a {
-            color: #a4a4dd; /* Matches text color */
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        
-        .dropdown-content a:hover {
-            background-color: #3e7320; /* Slightly lighter green for hover */
-            color: #ffffff; /* White text for contrast */
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        
-        .dropdown:hover .dropbtn {
-            background-color: #3e7320; /* Slightly lighter green for hover */
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Soft glow effect */
-        }
-        a {
-            color: #a4a4dd; /* Matches the text color */
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
-        }
-        
-        a:hover {
-            color: #ffffff; /* White on hover for contrast */
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>History Game Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --accent: #64ffda;
+      --text-light: #e0e0e0;
+      --text-muted: #aaaaaa;
+      --card-bg: #1e1e1e;
+      --hover-bg: #2a2a2a;
+    }
 
-        
-    </style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    h2 {
+      color: var(--accent);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .description p {
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .dropbtn {
+      background-color: var(--accent);
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: var(--card-bg);
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.4);
+      z-index: 1;
+      border-radius: 6px;
+    }
+
+    .dropdown-content a {
+      color: var(--text-light);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.2s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: var(--hover-bg);
+      color: var(--accent);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #00e6c3;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 5px var(--accent);
+    }
+
+    .links ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .links li {
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .dropbtn {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>History Game Portfolio</h1>
-    </header>
-    <div class="container">
-        <section class="description">
-            <h2>Project Description</h2>
-            <p>Guardians of the Past is a game designed to teach children problem-solving skills
-                while incorporating historical education. By reimagining historical figures, 
-                the game introduces players to key moments and individuals from history. 
-                Each historical figure will include unique facts, and players will be required
-                to answer history-related questions to progress, blending fun and learning 
-                seamlessly.
-            </p>
-        </section>
-            <div class="dropdown">
-                <button class="dropbtn">Timeline</button>
-                <div class="dropdown-content">
-                    <a href="week6.html">Week 6</a>
-                    <a href="week7.html">Week 7</a>
-                    <a href="week8.html">Week 8</a>
-                    <a href="week9.html">Week 9</a>
-                    <a href="week10.html">Week 10</a>
-                    <a href="week11.html">Week 11</a>
-                    <a href="week1213.html">Weeks 12-13</a>
-                    <a href="week14.html">Week 14</a>
-                    </div>
-            </div>
-        </section>
+  <header>
+    <h1>Guardians of the Past</h1>
+    <p>A History Game Teaching Through Time</p>
+  </header>
 
-        <h2>   </h2>
-        <a href="mvp.html">MVP Planning</a>
-        
-        <section class="ideas">
-            <h2>Level Ideas</h2>
-            <h3>For every level/time period, give the new character some sort of weapon or mechanic based on the situation</h3>
-            <ul>
-                <h3>Ancient Egypt</h3>
-                <li><strong>Sneak mode:</strong> Makes enemies unaware of where you are and allows you to sneak up on them.</li>
-                <li><strong></strong>Have the character try to sneak into a Pharaoh's tomb and steal the treasure inside while also having cutscenes and dialogue about past pharaohs.</li>
-                <h3>Fall of Rome</h3>
-                <li><strong>Time Stop:</strong> Allows time to freeze or go into slow motion for a short amount of time allowing you to become more powerful.</li>
-                <li><strong></strong>Have the character attempt to stop the Fall of Rome and keep Rome afloat. We will also have the character meet past leaders.</li>
-                <h3>10th Century China</h3>
-                <li><strong>Explosives/Smokes:</strong> Allows you to place traps in order to help defeat other enemies while smokes will distract enemies and allow you to get away.</li>
-                <li><strong></strong>This section will have your character help with the creation of guns and gunpowder in general. We will have them do this in order to take over China.</li>
-                <h3>Black Plague</h3>
-                <li><strong>Medicine:</strong> Through the level you will acquire more medicines which will allow you to gain new magical abilities or heal yourself.</li>
-                <li><strong></strong>Place them into a level where we have them get specific items in order to create a remedy to cure people from the black plague.</li>
-                <h3>1492</h3>
-                <li><strong>Mapping/Scouting:</strong> This allows you to enter a first person view almost like controlling a drone to fly ahead and see enemies or traps ahead of you.</li>
-                <li><strong></strong>Have the person help to build and set up new lands as well as have them have a portion where they have to stay alive and help others on the trip.</li>
-            </ul>
-        </section>
-        
-        <section class="links">
-            <h2>Team Member Portfolios</h2>
-            <ul>
-                <li><a href="https://aarav-dubal.github.io/" target="_blank">Aarav's Portfolio</a></li>
-                <li><a href="https://ryan-g14.github.io/" target="_blank">Ryan's Portfolio</a></li>
-            </ul>
-            <h2>Research Documents</h2>
-            <ul>
-                <li><a href="https://docs.google.com/document/d/1zzFWQAgpE3W8VU7hpwR2LkS0-dFl274mXAMO8NU6X6k/edit?tab=t.0" target="_blank">Brainstorm Document</a></li>
-                <li><a href="https://docs.google.com/document/d/1tNXbqofpUcX_NsZdmHI-JV8V2AFQhTon66Xq8TDF0cY/edit?tab=t.0"target="_blank">MVP Document</a></li>
-            </ul>
-        </section>
+  <div class="container">
+    <section class="description">
+      <h2>Project Description</h2>
+      <p>Guardians of the Past is a game crafted to blend historical education with engaging gameplay. Players explore time periods, interact with key historical figures, and use unique mechanics to solve challenges rooted in real events.</p>
+    </section>
+
+    <div class="dropdown">
+      <button class="dropbtn">Timeline</button>
+      <div class="dropdown-content">
+        <a href="week6.html">Week 6</a>
+        <a href="week7.html">Week 7</a>
+        <a href="week8.html">Week 8</a>
+        <a href="week9.html">Week 9</a>
+        <a href="week10.html">Week 10</a>
+        <a href="week11.html">Week 11</a>
+        <a href="week1213.html">Weeks 12–13</a>
+        <a href="week14.html">Week 14</a>
+      </div>
     </div>
+
+    <h2><a href="mvp.html">MVP Planning</a></h2>
+
+    <section class="ideas">
+      <h2>Level Ideas</h2>
+      <ul>
+        <li><strong>Ancient Egypt:</strong> Sneak mode to infiltrate tombs and recover artifacts while learning about pharaohs.</li>
+        <li><strong>Fall of Rome:</strong> Time Stop to alter outcomes and meet historic Roman leaders.</li>
+        <li><strong>10th Century China:</strong> Use explosives and traps, contributing to the invention of gunpowder.</li>
+        <li><strong>Black Plague:</strong> Heal with mystical medicines and discover remedies to save civilians.</li>
+        <li><strong>1492 Era:</strong> Scout new lands, survive voyages, and chart unknown territories with a first-person mapping mechanic.</li>
+      </ul>
+    </section>
+
+    <section class="links">
+      <h2>Team Member Portfolios</h2>
+      <ul>
+        <li><a href="https://aarav-dubal.github.io/" target="_blank">Aarav's Portfolio</a></li>
+        <li><a href="https://ryan-g14.github.io/" target="_blank">Ryan's Portfolio</a></li>
+      </ul>
+
+      <h2>Research Documents</h2>
+      <ul>
+        <li><a href="https://docs.google.com/document/d/1zzFWQAgpE3W8VU7hpwR2LkS0-dFl274mXAMO8NU6X6k/edit?tab=t.0" target="_blank">Brainstorm Document</a></li>
+        <li><a href="https://docs.google.com/document/d/1tNXbqofpUcX_NsZdmHI-JV8V2AFQhTon66Xq8TDF0cY/edit?tab=t.0" target="_blank">MVP Document</a></li>
+      </ul>
+    </section>
+  </div>
 </body>
 </html>
