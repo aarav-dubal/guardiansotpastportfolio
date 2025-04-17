@@ -2,191 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>History Game Portfolio</title>
-  <style>
-    :root {
-      --bg-color: #121212;
-      --accent: #64ffda;
-      --text-light: #e0e0e0;
-      --text-muted: #aaaaaa;
-      --card-bg: #1e1e1e;
-      --hover-bg: #2a2a2a;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-light);
-      line-height: 1.6;
-    }
-
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background-color: var(--card-bg);
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    }
-
-    h2 {
-      color: var(--accent);
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .description p {
-      color: var(--text-muted);
-      margin-top: 0.5rem;
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-      margin-top: 1rem;
-    }
-
-    .dropbtn {
-      background-color: var(--accent);
-      color: #000;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: var(--card-bg);
-      min-width: 180px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.4);
-      z-index: 1;
-      border-radius: 6px;
-    }
-
-    .dropdown-content a {
-      color: var(--text-light);
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      transition: background 0.2s ease;
-    }
-
-    .dropdown-content a:hover {
-      background-color: var(--hover-bg);
-      color: var(--accent);
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown:hover .dropbtn {
-      background-color: #00e6c3;
-    }
-
-    ul {
-      padding-left: 1.5rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    a:hover {
-      color: #ffffff;
-      text-shadow: 0 0 5px var(--accent);
-    }
-
-    .links ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    .links li {
-      margin-bottom: 0.5rem;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-      .dropbtn {
-        font-size: 14px;
-        padding: 8px 16px;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guardians of the Past</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <h1>Guardians of the Past</h1>
-    <p>A History Game Teaching Through Time</p>
+  <header class="header">
+    <div class="header-content">
+      <h1 class="site-title">Guardians of the Past</h1>
+      <nav class="nav">
+        <div class="dropdown">
+          <button class="dropbtn">Timeline ▾</button>
+          <div class="dropdown-content">
+            <a href="week6.html">Week 6</a>
+            <a href="week7.html">Week 7</a>
+            <a href="week8.html">Week 8</a>
+            <a href="week9.html">Week 9</a>
+            <a href="week10.html">Week 10</a>
+            <a href="week11.html">Week 11</a>
+            <a href="week1213.html">Weeks 12–13</a>
+            <a href="week14.html">Week 14</a>
+          </div>
+        </div>
+      </nav>
+    </div>
   </header>
 
-  <div class="container">
-    <section class="description">
+  <main class="main-content">
+    <section class="section description reveal">
       <h2>Project Description</h2>
-      <p>Guardians of the Past is a game crafted to blend historical education with engaging gameplay. Players explore time periods, interact with key historical figures, and use unique mechanics to solve challenges rooted in real events.</p>
+      <p>
+        <strong>Guardians of the Past</strong> is an educational game blending historical storytelling with action and puzzle-solving.
+        Players meet reimagined historical figures and tackle challenges that test their knowledge, creativity, and decision-making.
+        The game engages learners through immersive experiences and problem-solving mechanics across eras.
+      </p>
     </section>
 
-    <div class="dropdown">
-      <button class="dropbtn">Timeline</button>
-      <div class="dropdown-content">
-        <a href="week6.html">Week 6</a>
-        <a href="week7.html">Week 7</a>
-        <a href="week8.html">Week 8</a>
-        <a href="week9.html">Week 9</a>
-        <a href="week10.html">Week 10</a>
-        <a href="week11.html">Week 11</a>
-        <a href="week1213.html">Weeks 12–13</a>
-        <a href="week14.html">Week 14</a>
+    <section class="section mvp-link reveal">
+      <h2>MVP Planning</h2>
+      <a href="mvp.html" class="btn">View MVP Page</a>
+    </section>
+
+    <section class="section ideas reveal">
+      <h2>Level Ideas by Era</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Ancient Egypt</h3>
+          <p><strong>Sneak Mode:</strong> Infiltrate a Pharaoh's tomb and uncover ancient secrets.</p>
+        </div>
+        <div class="card">
+          <h3>Fall of Rome</h3>
+          <p><strong>Time Stop:</strong> Slow down time to influence key moments in Roman history.</p>
+        </div>
+        <div class="card">
+          <h3>10th Century China</h3>
+          <p><strong>Explosives & Smokes:</strong> Invent gunpowder and outsmart enemies with stealth tools.</p>
+        </div>
+        <div class="card">
+          <h3>The Black Plague</h3>
+          <p><strong>Healing Powers:</strong> Use medicinal abilities to save lives and stop the spread.</p>
+        </div>
+        <div class="card">
+          <h3>1492 Exploration</h3>
+          <p><strong>Scouting View:</strong> First-person map scanning and surviving uncharted lands.</p>
+        </div>
       </div>
-    </div>
-
-    <h2><a href="mvp.html">MVP Planning</a></h2>
-
-    <section class="ideas">
-      <h2>Level Ideas</h2>
-      <ul>
-        <li><strong>Ancient Egypt:</strong> Sneak mode to infiltrate tombs and recover artifacts while learning about pharaohs.</li>
-        <li><strong>Fall of Rome:</strong> Time Stop to alter outcomes and meet historic Roman leaders.</li>
-        <li><strong>10th Century China:</strong> Use explosives and traps, contributing to the invention of gunpowder.</li>
-        <li><strong>Black Plague:</strong> Heal with mystical medicines and discover remedies to save civilians.</li>
-        <li><strong>1492 Era:</strong> Scout new lands, survive voyages, and chart unknown territories with a first-person mapping mechanic.</li>
-      </ul>
     </section>
 
-    <section class="links">
+    <section class="section links reveal">
       <h2>Team Member Portfolios</h2>
       <ul>
         <li><a href="https://aarav-dubal.github.io/" target="_blank">Aarav's Portfolio</a></li>
@@ -199,6 +83,12 @@
         <li><a href="https://docs.google.com/document/d/1tNXbqofpUcX_NsZdmHI-JV8V2AFQhTon66Xq8TDF0cY/edit?tab=t.0" target="_blank">MVP Document</a></li>
       </ul>
     </section>
-  </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Guardians of the Past. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
