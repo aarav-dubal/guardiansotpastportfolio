@@ -137,3 +137,17 @@ body {
   font-size: 0.85rem;
   color: #777;
 }
+
+.video-thumb {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.video-thumb:hover {
+  transform: scale(1.03);
+}
+
